@@ -25,9 +25,8 @@ public class MyCalculator {
      callMyMethod(p1, p2, p3);
      
 	}
-     // Console.WriteLine();
-
- 
+	
+	
 	public static void callMyMethod( int a, int b, int c) {
  
 		switch (c)
