@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dummy Form to Validate</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--
+    <link rel='stylesheet' type='text/css' media='screen' href='FormValidation.css'>
+    <script src='FormValidation.js'></script>
+    -->
+</head>
+<body bgcolor="lightpink">
+    <h1 style="text-align: center; color: maroon;"> Details Validation</h1>
+    <p> <i>Enter your details and we'll validate them for you. <br>
+        Free of cost. <br>
+        We promise not to steal and sell your information.<br></i>
+    </p>
+    <hr  style="background-color: black; height: 3px;">
+    <form >
+        <b>Enter First Name  :  &nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <input type="text" name="FirstName" minlength="3" maxlength="8"  placeholder="Your first name here" required> <br><br>
+        <b>Enter Middle Name :  &nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <input type="text" name="MiddleName" placeholder="Your middle name here" > <br><br>
+        <b>Enter Last Name   :  &nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <input type="text" name="LastName" minlength="2" maxlength="12"  placeholder="Your Last name here" required> <br><br>
+        <b>Enter your Email  :  &nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <input type="email" name="Email" placeholder="Your email here" required><br><br>
+        <b>Enter your DOB    :  &nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <input type="date" name="DOB" required><br><br>
+        <input type="Submit" value="Submit">
+    </form>   
+</body>
+</html>
