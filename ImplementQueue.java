@@ -18,9 +18,9 @@ public class ImplementQueue {
 		q.display();
 		
 		
-		System.out.println(q.isEmpty());
+		System.out.println("Emptiness of queue is " + q.isEmpty());
 		System.out.println("Size " + q.getSize() );
-		System.out.println(q.isFull());
+		System.out.println("Fullness of queue is " + q.isFull());
 		
 	}
 
