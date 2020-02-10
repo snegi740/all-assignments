@@ -21,7 +21,14 @@ public class NoobQueue {
 		int data = myQ[start];
 		
 		if(!isEmpty()) {
-		 	start = start +1;
+		 	for (int i = 0; i<=size ; i++) {
+		 		if(i != size) {
+		 		myQ[i] = myQ[i+1];
+		 		}
+		 		else {
+		 			size = size - 1;
+		 		}
+		 	}
 		 	size = size - 1;
 		}
 		else {
