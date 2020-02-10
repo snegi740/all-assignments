@@ -6,7 +6,6 @@ public class MyCalculator {
 	public static void main(String args[]) {
 		
 		System.out.println("This calculator only takes numbers as input");
-		//i know i didn't handle the string input exception or the empty input exception.
 		
 		takingInput();     //calling only one method as said to
      
@@ -36,11 +35,11 @@ public class MyCalculator {
          		if (b>=0) {
          		System.out.println(power(a,b));}
          		else {
-         			System.out.println("Can't power negative numbers");   //didn't add the functionality of negative powers
+         			System.out.println("Cannot have negative exponent");  
          		}
          		break;
          	default:
-         		System.out.println("enter correct option for operation"); //for wrong input
+         		System.out.println("Enter correct option for operation"); //for wrong input
          		break;
 		}
 		}
@@ -58,14 +57,17 @@ public class MyCalculator {
 		}
 		public static void takingInput() {
 			
-			
+			int p1, p2, p3;
 			
 			System.out.println("Enter 1st number :");
 			 Scanner s1 = new Scanner(System.in);
-			     int p1 = s1.nextInt();	
+			 	try {
+			 		p1 = s1.nextInt();	
+			     
+			 
 			 System.out.println("Enter 2nd number :");
 			 Scanner s2 = new Scanner(System.in);
-		    	 int p2 = s2.nextInt();
+		    	 p2 = s2.nextInt();
 		    	
 			 System.out.println("Enter 1 for Addition :");
 			 System.out.println("Enter 2 for Subtraction :");
@@ -75,19 +77,31 @@ public class MyCalculator {
 
 			 System.out.println("Enter operation :");
 			 Scanner s3 = new Scanner(System.in);
-				int p3 = s3.nextInt();
+				p3 = s3.nextInt();
+			
 			 
 
 		     callMyMethod(p1, p2, p3);
-		     System.out.println("Do you want to perform calculation again."
-		     		+ " Press 0 for yes and any other number for exit."); 
+		}
+		     catch (Exception e) {
+			 		System.out.println("Incorrect form of input");
+			 		takingInput();
+			 	}
+		     System.out.println("Do you want to perform calculation again." + "\n"
+		     		+ "Press 0 for yes and any other number for exit."); 
 		     // added functionality for multiple calculations.
 		     Scanner s4 = new Scanner(System.in);
 		     	int p4 = s4.nextInt();
 		     	if (p4 == 0) {
 		     		takingInput();
 		     	}
+		     	else {
+		     		return;
+		     	}
 		     	
 		}
+		
+		
+
 }
 
