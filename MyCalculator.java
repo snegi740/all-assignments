@@ -32,10 +32,13 @@ public class MyCalculator {
          			System.out.println(a/b); 
          		}break;
          	case 5:
-         		if (b>=0) {
-         		System.out.println(power(a,b));}
-         		else {
-         			System.out.println("Cannot have negative exponent");  
+         		try {
+         		if ( a <0 || b<0) {
+         			throw new Exception ("");
+         		}
+         		System.out.println(power(a,b));
+         		} catch (Exception e) {
+         		System.out.println("a or b can't be negative");
          		}
          		break;
          	default:
