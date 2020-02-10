@@ -19,8 +19,13 @@ public class ImplementQueue {
             switch(ch)
                 {
                     case 1: System.out.println("Enter Integer to add to queue");
+                            try {
                             int value=new Scanner(System.in).nextInt();   
                             q.adding(value);
+                    		} catch (Exception e) {
+                    			System.out.println("Enter an integer");
+                    			
+                    		}
                             break;
                     case 2: System.out.println("Removing first item of queue");
                             q.removing();
