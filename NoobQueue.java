@@ -39,11 +39,16 @@ public class NoobQueue {
 	
 	
 	public void display () {
+		if (size == 0) {
+			System.out.println("Queue is Empty");
+		}
+		else {
 		for (int i = 0; i < size; i++) {
 			
-			System.out.print( myQ[start+i] + " " );
+			System.out.print("Current queue is " + myQ[start+i] + " ");
 		}
 		System.out.println("\n");
+		}
 	}
 	
 	public int getSize() {
